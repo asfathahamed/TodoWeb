@@ -1,0 +1,11 @@
+
+<mat-list>
+    <mat-list-item *ngFor="let item of todoList">
+        <mat-icon matListIcon>folder</mat-icon>
+        <h3 matLine> {{item.description}} </h3>
+        <p matLine>
+        <span> {{item.id}} </span>
+        <span class="demo-2"> -- {{item.description}} </span>
+        </p>
+    </mat-list-item>
+</mat-list>
