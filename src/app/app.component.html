@@ -1,8 +1,20 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    {{ title }}
-  </h1>
+<mat-toolbar color="primary">
+  <mat-toolbar-row class="flex-centered">
+    <h1 class="brand-logo">
+      {{ title }}
+    </h1>
+  </mat-toolbar-row>
+</mat-toolbar>
+<div class="container space-above">
+  <mat-card>
+    <mat-card-content>
+      <form class="add-todo-form">
+        <mat-form-field class="add-todo-input">
+          <input matInput placeholder="New Todo">
+          <mat-icon matSuffix>add</mat-icon>
+        </mat-form-field>
+      </form>
+      <router-outlet></router-outlet>
+    </mat-card-content>
+  </mat-card>
 </div>
-
-<router-outlet></router-outlet>

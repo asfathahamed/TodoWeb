@@ -1,11 +1,9 @@
-
 <mat-list>
-    <mat-list-item *ngFor="let item of todoList">
-        <mat-icon matListIcon>folder</mat-icon>
-        <h3 matLine> {{item.description}} </h3>
-        <p matLine>
-        <span> {{item.id}} </span>
-        <span class="demo-2"> -- {{item.description}} </span>
-        </p>
-    </mat-list-item>
+  <mat-list-item *ngFor="let item of todoList" class="flex-row">
+    <mat-checkbox matLine>{{item.description}}</mat-checkbox>
+    <div class="list-action suffix">
+      <mat-icon mat-list-icon (click)="editItem(todoList.id)">edit</mat-icon>
+      <mat-icon mat-list-icon (click)="deleteItem(todoList.id)">delete</mat-icon>
+    </div>
+  </mat-list-item>
 </mat-list>
