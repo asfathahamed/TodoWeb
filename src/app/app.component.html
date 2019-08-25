@@ -1,20 +1,14 @@
 <mat-toolbar color="primary">
-  <mat-toolbar-row class="flex-centered">
+  <mat-toolbar-row>
     <h1 class="brand-logo">
       {{ title }}
     </h1>
+    <a mat-button [routerLink]="['/todo']">
+      <span>Todo</span>
+    </a>
+    <a mat-button [routerLink]="['/notes']">
+      <span>Notes</span>
+    </a>
   </mat-toolbar-row>
 </mat-toolbar>
-<div class="container space-above">
-  <mat-card>
-    <mat-card-content>
-      <form class="add-todo-form">
-        <mat-form-field class="add-todo-input">
-          <input matInput placeholder="New Todo">
-          <mat-icon matSuffix>add</mat-icon>
-        </mat-form-field>
-      </form>
-      <router-outlet></router-outlet>
-    </mat-card-content>
-  </mat-card>
-</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,6 @@
+<form class="add-todo-form">
+  <mat-form-field class="add-todo-input">
+    <input matInput placeholder="New Todo" [(ngModel)]="newTodo" [ngModelOptions]="{standalone: true}">
+    <mat-icon matSuffix (click)="addTodo(newTodo)">add</mat-icon>
+  </mat-form-field>
+</form>
