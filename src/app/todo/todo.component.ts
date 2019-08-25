@@ -1,39 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { TodoService } from '../data/todo.service';
-
-export interface TodoItem {
-  id: number;
-  description: string;
-}
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-todo',
-  templateUrl: './todo.component.html',
-  styleUrls: ['./todo.component.less']
+  selector: "todo-component",
+  templateUrl: "./todo.component.html",
+  styleUrls: ["./todo.component.less"]
 })
-export class TodoComponent implements OnInit {
-  public todoList: TodoItem[];
+export class TodoComponent {
+  title = "Todo";
 
-  constructor(private todoService: TodoService) { }
+  public editTodo(id) {}
 
-  ngOnInit() {
-
-    // this.todoService.getTodoList().subscribe(response => {
-    //   this.todoList = response;
-    // });
-
-    this.todoList = [{
-      id: 1,
-      description: 'World'
-    },
-    {
-      id: 2,
-      description: 'Hello'
-    },
-    {
-      id: 3,
-      description: 'Welcome'
-    }
-  ]
-  }
+  public deleteTodo(id) {}
 }
